@@ -44,7 +44,8 @@ double simulation_avg(int n, int divided_num){
     for (int i=1; i<=n; i++){
         int l=1, r=n, g;
         while (l<=r){
-            g = (l+r) / divided_num;
+            // Use offset from l to ensure g is within [l, r]
+            g = l + (r - l) / divided_num;
             sum_steps++;
             if (i == g) break;
             else if (i > g) l = g + 1;
@@ -52,5 +53,5 @@ double simulation_avg(int n, int divided_num){
             else if (l > r) cout << "error" << "\n";
         }
     }
-    return sum_steps / n;
+    return static_cast<double>(sum_steps) / n;
 }
