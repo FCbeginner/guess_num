@@ -24,7 +24,7 @@ int main(){
         double times_w_2 = worst_Case_divide_three(n);
         double times_a_1 = simulation_avg(n, 2);
         double times_a_2 = simulation_avg(n, 3);
-        cout << "\t" << "worst cace" << "\t" << "average case" << "\n";
+        cout << "\t" << "theory" << "\t\t" << "simulation" << "\n";
         cout << "小華" << "\t" << times_w_1 << "\t\t" << times_a_1 << "\n";
         cout << "小英" << "\t" << times_w_2 << "\t\t" << times_a_2 << "\n";
         cout << "unit" << "\t" << "(times)" << "\t\t" << "(times)" << "\n";
